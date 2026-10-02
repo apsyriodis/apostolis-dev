@@ -9,6 +9,13 @@ export default defineConfig({
   site: "https://www.apostolis.dev",
   output: "static",
   adapter: vercel(),
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "el"],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],

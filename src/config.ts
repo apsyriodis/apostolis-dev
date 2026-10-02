@@ -119,4 +119,43 @@ export const siteConfig = {
       skills: ["AI Agents"],
     },
   ],
+    ui: {
+    nav: {
+      about: "About",
+      projects: "Projects",
+      experience: "Experience",
+      education: "Education",
+    },
+    hero: {
+      hello: "Hello!",
+      im: "I'm",
+    },
+    sections: {
+      aboutMe: "About Me",
+      projects: "Projects",
+      experience: "Experience",
+      certifications: "Certifications",
+      education: "Education",
+      contact: "Get in touch",
+    },
+    contact: {
+      intro: "Have a project in mind or want to work together? Drop me a message and I'll get back to you as soon as possible.",
+      name: "Name",
+      namePlaceholder: "Your name",
+      email: "Email",
+      emailPlaceholder: "you@example.com",
+      message: "Message",
+      messagePlaceholder: "Tell me about your project...",
+      send: "Send message",
+      sending: "Sending...",
+      success: "✓ Message sent! I'll get back to you soon.",
+      errorRequired: "All fields are required.",
+      errorInvalidEmail: "Please enter a valid email address.",
+      errorGeneric: "Something went wrong. Please try again.",
+    },
+    footer: {
+      tagline: "Building SaaS platforms from scratch",
+      rights: "All rights reserved.",
+    },
+  },
 };

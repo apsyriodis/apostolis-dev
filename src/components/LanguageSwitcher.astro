@@ -1,0 +1,39 @@
+---
+const pathname = Astro.url.pathname;
+const isGreek = pathname.startsWith("/el");
+const currentLocale = isGreek ? "el" : "en";
+
+const enHref = isGreek
+  ? pathname.replace(/^\/el/, "") || "/"
+  : pathname;
+const elHref = isGreek
+  ? pathname
+  : `/el${pathname === "/" ? "/" : pathname}`;
+---
+
+<div class="flex items-center gap-1 bg-white/70 backdrop-blur-sm border border-gray-200 rounded-full p-1 shadow-sm">
+  <a
+    href={enHref}
+    class={`flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${
+      currentLocale === "en"
+        ? "bg-gray-900 text-white"
+        : "text-gray-600 hover:text-gray-900"
+    }`}
+    aria-label="English"
+  >
+    <span class="text-base leading-none">🇬🇧</span>
+    <span class="hidden sm:inline">EN</span>
+  </a>
+  <a
+    href={elHref}
+    class={`flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200 ${
+      currentLocale === "el"
+        ? "bg-gray-900 text-white"
+        : "text-gray-600 hover:text-gray-900"
+    }`}
+    aria-label="Ελληνικά"
+  >
+    <span class="text-base leading-none">🇬🇷</span>
+    <span class="hidden sm:inline">EL</span>
+  </a>
+</div>

@@ -1,12 +1,13 @@
 ---
-import { siteConfig } from "../config";
+import { getSiteConfig } from "../i18n";
+const siteConfig = getSiteConfig(Astro.url.pathname);
 ---
 
 <section id="about" class="p-8 sm:p-12 md:p-16 lg:p-24">
   <div class="max-w-6xl mx-auto">
     <div class="mb-12">
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
-        About Me
+      <h2 class="...">
+        {siteConfig.ui.sections.aboutMe}
       </h2>
       <div
         class="w-[75px] h-[5px] mt-2 rounded-full"
