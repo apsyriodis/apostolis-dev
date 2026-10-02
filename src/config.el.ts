@@ -14,7 +14,7 @@ export const siteConfig = {
     partnely: "https://partnely.com/partners/apostolis-syriodis-developer",
   },
   aboutMe:
-    "Είμαι Senior Full Stack Engineer με έδρα την Αθήνα και 5+ χρόνια εμπειρίας στην κατασκευή production-grade web εφαρμογών. Ξεκίνησα ως backend developer και σταδιακά επεκτάθηκα σε full stack — σήμερα σχεδιάζω και παραδίδω ολόκληρες SaaS πλατφόρμες, από αρχιτεκτονική βάσης δεδομένων και REST APIs μέχρι React frontends και Docker deployments. Έχω δουλέψει σε high-traffic retail συστήματα, multi-tenant B2B πλατφόρμες, και έχω χτίσει το Eukairon — μια multi-tenant SaaS πλατφόρμα κρατήσεων — από το μηδέν με Laravel, React, MySQL, Docker και Stripe. Με νοιάζει ο καθαρός κώδικας, τα σωστά tests, και το να παραδίδω features που λύνουν πραγματικά επιχειρηματικά προβλήματα.",
+    "Είμαι Senior Full Stack Engineer με έδρα την Αθήνα και 5+ χρόνια εμπειρίας στην κατασκευή production-grade web εφαρμογών. Ξεκίνησα ως backend developer και σταδιακά επεκτάθηκα σε full stack — σήμερα σχεδιάζω και παραδίδω ολόκληρες SaaS πλατφόρμες, από αρχιτεκτονική βάσης δεδομένων και REST APIs μέχρι React frontends και Docker deployments. Έχω δουλέψει σε high-traffic retail συστήματα, multi-tenant B2B πλατφόρμες, και έχω χτίσει το Eukairon — μια multi-tenant SaaS πλατφόρμα κρατήσεων — με Laravel, React, MySQL, Docker και Stripe. Με νοιάζει ο καθαρός κώδικας, τα σωστά tests, και το να παραδίδω features που λύνουν πραγματικά επιχειρηματικά προβλήματα.",
   skills: [
     "Laravel",
     "PHP",
@@ -33,7 +33,7 @@ export const siteConfig = {
     {
       name: "Eukairon",
       description:
-        "Μια multi-tenant SaaS πλατφόρμα online κρατήσεων, χτισμένη από το μηδέν. Διαχειρίζεται tenant isolation, επαναλαμβανόμενες κρατήσεις, Stripe payments, και πλήρη test coverage με PHPUnit και Playwright.",
+        "Μια multi-tenant SaaS πλατφόρμα online κρατήσεων. Διαχειρίζεται tenant isolation, επαναλαμβανόμενες κρατήσεις, Stripe payments, και πλήρη test coverage με PHPUnit και Playwright.",
       link: "/el/projects/eukairon",
       skills: ["Laravel", "React.js", "MySQL", "Docker", "Stripe"],
     },
