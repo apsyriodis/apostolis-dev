@@ -7,6 +7,15 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 const ui = siteConfig.ui;
+
+const isGreek = Astro.url.pathname.startsWith("/el");
+const basePath = isGreek ? "/el" : "";
+const isHomepage =
+  Astro.url.pathname === "/" ||
+  Astro.url.pathname === "/el" ||
+  Astro.url.pathname === "/el/";
+
+const link = (anchor: string) => (isHomepage ? anchor : `${basePath}/${anchor}`);
 ---
 
 <header
@@ -14,14 +23,12 @@ const ui = siteConfig.ui;
   class="fixed top-0 left-0 right-0 z-50 hidden md:block transition-all duration-300"
 >
   <nav class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
-    <!-- Left spacer for symmetry -->
     <div class="w-32"></div>
 
-    <!-- Center navigation -->
     <ul class="flex items-center gap-8">
       <li>
         <a
-          href="#about"
+          href={link("#about")}
           class="text-gray-700 hover:text-black transition-colors font-medium"
         >
           {ui.nav.about}
@@ -31,7 +38,7 @@ const ui = siteConfig.ui;
         hasProjects && (
           <li>
             <a
-              href="#projects"
+              href={link("#projects")}
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
               {ui.nav.projects}
@@ -43,7 +50,7 @@ const ui = siteConfig.ui;
         hasExperience && (
           <li>
             <a
-              href="#experience"
+              href={link("#experience")}
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
               {ui.nav.experience}
@@ -55,7 +62,7 @@ const ui = siteConfig.ui;
         hasEducation && (
           <li>
             <a
-              href="#education"
+              href={link("#education")}
               class="text-gray-700 hover:text-black transition-colors font-medium"
             >
               {ui.nav.education}
@@ -65,7 +72,6 @@ const ui = siteConfig.ui;
       }
     </ul>
 
-    <!-- Right: Language switcher -->
     <div class="w-32 flex justify-end">
       <LanguageSwitcher />
     </div>
