@@ -41,7 +41,7 @@ export const siteConfig = {
   experience: [
     {
       company: "Tekmon",
-      title: "Senior Backend Developer",
+      title: "Senior Backend Engineer",
       dateRange: "2025 – Present",
       bullets: [
         "Developed and maintained a multi-tenant B2B SaaS platform used by enterprise customers.",
