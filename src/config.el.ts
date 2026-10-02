@@ -6,11 +6,11 @@ export const siteConfig = {
   accentColor: "#2E7D8F",
   social: {
     email: "apsyriodis@gmail.com",
-    linkedin: "https://www.linkedin.com/in/apostolos-syriodis-413a691a7",
+    linkedin: "https://www.linkedin.com/in/apostolis-syriodis-413a691a7",
     github: "https://github.com/apsyriodis",
-    upwork: "https://www.upwork.com/freelancers/apostolos97",
+    upwork: "https://www.upwork.com/freelancers/apostolis97",
     fiverr: "https://www.fiverr.com/apostolis_",
-    koalla: "https://www.koalla.gr/korydallos/top-level-category/apostolos-syriodis",
+    koalla: "https://www.koalla.gr/korydallos/top-level-category/apostolis-syriodis",
     partnely: "https://partnely.com/partners/apostolis-syriodis-developer",
   },
   aboutMe:
