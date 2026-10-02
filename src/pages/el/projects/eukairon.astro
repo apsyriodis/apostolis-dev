@@ -1,0 +1,210 @@
+---
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { getSiteConfig } from "../../../i18n";
+import "../../../styles/global.css";
+
+const siteConfig = getSiteConfig(Astro.url.pathname);
+const accent = siteConfig.accentColor;
+---
+
+<html lang="el">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Eukairon — Multi-tenant SaaS πλατφόρμα κρατήσεων, χτισμένη από το μηδέν με Laravel, React, MySQL & Docker."
+    />
+    <meta name="author" content={siteConfig.name} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Eukairon — Case Study | Αποστόλης Συριώδης" />
+    <meta
+      property="og:description"
+      content="Πώς έφτιαξα μια multi-tenant SaaS πλατφόρμα κρατήσεων από το μηδέν με Laravel, React, MySQL & Docker."
+    />
+    <meta property="og:image" content="https://www.apostolis.dev/eukairon-banner.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Eukairon — Case Study | {siteConfig.name}</title>
+  </head>
+  <body>
+    <Header />
+
+    <main class="pt-32 pb-24">
+      <!-- HERO -->
+      <section class="px-6 sm:px-12 md:px-24 pb-16">
+        <div class="max-w-6xl mx-auto">
+          <a
+            href="/el/"
+            class="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors mb-8"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Πίσω στο portfolio
+          </a>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+            <div class="lg:col-span-2">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-semibold px-3 py-1 rounded-full" style={`background-color: ${accent}20; color: ${accent}`}>
+                  FLAGSHIP PROJECT
+                </span>
+                <span class="text-xs font-medium text-amber-700 bg-amber-100 px-3 py-1 rounded-full">
+                  Έρχεται σύντομα
+                </span>
+              </div>
+              <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                Eukairon
+              </h1>
+              <p class="text-xl sm:text-2xl text-gray-600 leading-relaxed mb-8">
+                Multi-tenant SaaS πλατφόρμα κρατήσεων για μικρές επιχειρήσεις — κομμωτήρια, συνεργεία, κτηνιατρεία. Χτισμένη από το μηδέν με Laravel, React, MySQL & Docker.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                {["Laravel", "React.js", "MySQL", "Docker", "Stripe", "PHPUnit", "Playwright"].map((tech) => (
+                  <span class="px-3 py-1.5 bg-gray-900 text-white text-sm font-medium rounded-lg">{tech}</span>
+                ))}
+              </div>
+            </div>
+            <div class="lg:col-span-1">
+              <div class="rounded-2xl overflow-hidden shadow-2xl" style={`border: 4px solid ${accent};`}>
+                <img src="/eukairon-landing.png" alt="Eukairon landing page" class="w-full h-auto" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OVERVIEW -->
+      <section class="px-6 sm:px-12 md:px-24 py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+          <div class="mb-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">Επισκόπηση</h2>
+            <div class="w-[75px] h-[5px] mt-2 rounded-full" style={`background-color: ${accent}`} />
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+              <p>
+                Το <strong class="text-gray-900">Eukairon</strong> επιτρέπει σε μικρές επιχειρήσεις να δέχονται κρατήσεις 24/7 — χωρίς τηλέφωνα, χωρίς χαμένα ραντεβού. Κάθε επιχείρηση (workspace) έχει τους δικούς της επαγγελματίες, υπηρεσίες, ωράριο, πελάτες και κρατήσεις, με πλήρη απομόνωση δεδομένων μεταξύ tenants.
+              </p>
+              <p>
+                Οι πελάτες κάνουν κρατήσεις μέσω public booking page. Οι ιδιοκτήτες διαχειρίζονται τα πάντα από dashboard με analytics, τιμολόγηση (Stripe), και ειδοποιήσεις.
+              </p>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-xl">
+              <img src="/eukairon-banner.png" alt="Eukairon — SaaS Booking Platform" class="w-full h-auto" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY FEATURES -->
+      <section class="px-6 sm:px-12 md:px-24 py-16">
+        <div class="max-w-6xl mx-auto">
+          <div class="mb-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">Βασικά Χαρακτηριστικά</h2>
+            <div class="w-[75px] h-[5px] mt-2 rounded-full" style={`background-color: ${accent}`} />
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: "Multi-tenant Αρχιτεκτονική", desc: "Πλήρης απομόνωση δεδομένων μεταξύ workspaces — σε middleware, model, και database level." },
+              { title: "Real-time Booking Engine", desc: "Οι πελάτες επιλέγουν υπηρεσία, επαγγελματία, ημερομηνία και ώρα. Conflict detection ενσωματωμένο." },
+              { title: "Role-based Access Control", desc: "Ρόλοι owner, admin, professional, customer με scoped δικαιώματα ανά workspace." },
+              { title: "Stripe Billing", desc: "Basic / Pro / Business subscription plans με admin plan override για ειδικές περιπτώσεις." },
+              { title: "Admin Dashboard", desc: "Analytics, activity logs, και γρήγορες ενέργειες σε μοντέρνο dashboard χτισμένο με React." },
+              { title: "Automated Tests", desc: "PHPUnit + Playwright coverage. Mutation-tested assertions για security-critical paths." },
+            ].map((f) => (
+              <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-6 hover:shadow-md transition-shadow">
+                <h3 class="text-lg font-bold text-gray-900 mb-2">{f.title}</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- TECHNICAL CHALLENGES -->
+      <section class="px-6 sm:px-12 md:px-24 py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+          <div class="mb-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">Τεχνικές Προκλήσεις</h2>
+            <div class="w-[75px] h-[5px] mt-2 rounded-full" style={`background-color: ${accent}`} />
+          </div>
+          <div class="space-y-8">
+            {[
+              { num: "01", title: "Tenant isolation σε κάθε layer", desc: "Δεν αρκεί ένα where('workspace_id', ...) — η απομόνωση έπρεπε να ελεγχθεί σε middleware, FormRequest authorize(), controller writes, route model binding, και queue jobs. Ένα dangling pointer στο current_workspace_id (owner removed από workspace) άνοιγε access. Λύθηκε με defense-in-depth: scopeBindings(), role gates, plan gates, και feature flags — κάθε layer αρνείται ανεξάρτητα." },
+              { num: "02", title: "Refusal shape consistency (403 vs 404)", desc: "Διαφορετικά endpoints απαντούσαν 403 (που ανακοινώνει ότι το surface υπάρχει) ενώ τα siblings έδιναν 404. Ένα 403 σε admin-only route = enumeration oracle. Ομαλοποιήθηκε σε 404 παντού για non-qualifying roles/plans, με tests που pin-άρουν το shape." },
+              { num: "03", title: "Stripe integration με plan override", desc: "Πέρα από τα standard Stripe subscriptions, υπάρχει admin plan_override feature για δωρεάν Pro/Business. Ο plan gate διαβάζει από μία authoritative πηγή (config/features.php) — όχι hardcoded strings. Τα API credentials scoped-άρονται στο plan, άρα downgraded workspace δεν μπορεί να καλέσει το API μετά από αλλαγή plan." },
+              { num: "04", title: "Conflict detection σε bookings", desc: "Χρήση του laraveljutsu/zap booking engine αλλά wrap-άρισμα σε δικό μας Booking model με workspace scoping. Date parsing σε τρία layers (web, API, public booking) είχε διαφορετική συμπεριφορά — λύθηκε με ->utc() αντί raw new DateTimeImmutable()." },
+              { num: "05", title: "Queue observability & data leaks", desc: "Τα notifications ήταν sync — κάθε email έμπαινε inline στο request. Μετακίνηση σε queue βελτίωσε latency αλλά δημιούργησε νέο πρόβλημα: αν ο worker πέσει, τα delivery logs δεν γράφονται, και historical rows με comment content διέρρεαν μέσω notification read paths μετά από feature retirement. Λύθηκε με centralized visibility (User::visibleNotifications()) που καλείται από όλα τα read paths + export job." },
+              { num: "06", title: "Test infrastructure robustness", desc: "phpunit.xml <env> entries ήταν inert — container .env υπερίσχυε, άρα tests push-άραν real jobs στο dev Redis (271K failed_jobs). Baseline drift 4 φορές (manual bump → λάθος) → λύθηκε με dynamic baseline.json + ±5 fuzz + executable check αντί prose." },
+            ].map((c) => (
+              <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-6 sm:p-8 hover:shadow-md transition-shadow">
+                <div class="flex items-start gap-6">
+                  <span class="text-2xl sm:text-3xl font-bold font-mono flex-shrink-0" style={`color: ${accent}`}>{c.num}</span>
+                  <div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">{c.title}</h3>
+                    <p class="text-gray-600 leading-relaxed">{c.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- ADMIN SHOWCASE -->
+      <section class="px-6 sm:px-12 md:px-24 py-16">
+        <div class="max-w-6xl mx-auto">
+          <div class="mb-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">Admin Dashboard</h2>
+            <div class="w-[75px] h-[5px] mt-2 rounded-full" style={`background-color: ${accent}`} />
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="rounded-2xl overflow-hidden shadow-xl">
+              <img src="/eukairon-dashboard.png" alt="Eukairon admin dashboard" class="w-full h-auto" />
+            </div>
+            <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+              <p>
+                Ένα ολοκληρωμένο admin panel με user roles, activity logs, και real-time analytics. Κάθε workspace βλέπει μόνο τα δικά του δεδομένα — multi-tenancy enforced παντού.
+              </p>
+              <ul class="space-y-3">
+                {["Multi-tenant SaaS αρχιτεκτονική", "Role-based access control", "Real-time analytics", "Activity logging & audit trail"].map((item) => (
+                  <li class="flex items-start gap-3">
+                    <span class="inline-block w-2 h-2 rounded-full mt-2.5 flex-shrink-0" style={`background-color: ${accent}`} />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="px-6 sm:px-12 md:px-24 py-16">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">Χρειάζεστε κάτι παρόμοιο;</h2>
+          <p class="text-xl text-gray-600 mb-10">
+            Χτίζω multi-tenant SaaS πλατφόρμες, REST APIs, και πολύπλοκες ενσωματώσεις από το μηδέν. Ας μιλήσουμε για το project σας.
+          </p>
+          <a href="/el/#contact" class="inline-flex items-center gap-2 px-8 py-4 text-white font-medium rounded-lg transition hover:opacity-90" style={`background-color: ${accent}`}>
+            Επικοινωνία
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>

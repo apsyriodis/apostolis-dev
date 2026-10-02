@@ -34,7 +34,7 @@ export const siteConfig = {
       name: "Eukairon",
       description:
         "Μια multi-tenant SaaS πλατφόρμα online κρατήσεων, χτισμένη από το μηδέν. Διαχειρίζεται tenant isolation, επαναλαμβανόμενες κρατήσεις, Stripe payments, και πλήρη test coverage με PHPUnit και Playwright.",
-      link: "https://eukairon.gr",
+      link: "/el/projects/eukairon",
       skills: ["Laravel", "React.js", "MySQL", "Docker", "Stripe"],
     },
   ],

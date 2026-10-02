@@ -1,0 +1,210 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { getSiteConfig } from "../../i18n";
+import "../../styles/global.css";
+
+const siteConfig = getSiteConfig(Astro.url.pathname);
+const accent = siteConfig.accentColor;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Eukairon — Multi-tenant SaaS booking platform built from scratch with Laravel, React, MySQL & Docker."
+    />
+    <meta name="author" content={siteConfig.name} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Eukairon — Case Study | Apostolis Syriodis" />
+    <meta
+      property="og:description"
+      content="How I built a multi-tenant SaaS booking platform from scratch with Laravel, React, MySQL & Docker."
+    />
+    <meta property="og:image" content="https://www.apostolis.dev/eukairon-banner.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Eukairon — Case Study | {siteConfig.name}</title>
+  </head>
+  <body>
+    <Header />
+
+    <main class="pt-32 pb-24">
+      <!-- HERO -->
+      <section class="px-6 sm:px-12 md:px-24 pb-16">
+        <div class="max-w-6xl mx-auto">
+          <a
+            href="/"
+            class="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors mb-8"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Back to portfolio
+          </a>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+            <div class="lg:col-span-2">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-semibold px-3 py-1 rounded-full" style={`background-color: ${accent}20; color: ${accent}`}>
+                  FLAGSHIP PROJECT
+                </span>
+                <span class="text-xs font-medium text-amber-700 bg-amber-100 px-3 py-1 rounded-full">
+                  Coming soon
+                </span>
+              </div>
+              <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                Eukairon
+              </h1>
+              <p class="text-xl sm:text-2xl text-gray-600 leading-relaxed mb-8">
+                A multi-tenant SaaS booking platform for small businesses — hair salons, auto shops, veterinary clinics. Built from scratch with Laravel, React, MySQL & Docker.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                {["Laravel", "React.js", "MySQL", "Docker", "Stripe", "PHPUnit", "Playwright"].map((tech) => (
+                  <span class="px-3 py-1.5 bg-gray-900 text-white text-sm font-medium rounded-lg">{tech}</span>
+                ))}
+              </div>
+            </div>
+            <div class="lg:col-span-1">
+              <div class="rounded-2xl overflow-hidden shadow-2xl" style={`border: 4px solid ${accent};`}>
+                <img src="/eukairon-landing.png" alt="Eukairon landing page" class="w-full h-auto" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OVERVIEW -->
+      <section class="px-6 sm:px-12 md:px-24 py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+          <div class="mb-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">Overview</h2>
+            <div class="w-[75px] h-[5px] mt-2 rounded-full" style={`background-color: ${accent}`} />
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+              <p>
+                <strong class="text-gray-900">Eukairon</strong> lets small businesses accept bookings 24/7 — no phone calls, no missed appointments. Each business (workspace) gets its own professionals, services, schedules, customers, and bookings, with complete data isolation between tenants.
+              </p>
+              <p>
+                Customers book through a public booking page. Owners manage everything from a dashboard with analytics, invoicing (Stripe), and notifications.
+              </p>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-xl">
+              <img src="/eukairon-banner.png" alt="Eukairon — SaaS Booking Platform" class="w-full h-auto" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY FEATURES -->
+      <section class="px-6 sm:px-12 md:px-24 py-16">
+        <div class="max-w-6xl mx-auto">
+          <div class="mb-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">Key Features</h2>
+            <div class="w-[75px] h-[5px] mt-2 rounded-full" style={`background-color: ${accent}`} />
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: "Multi-tenant Architecture", desc: "Complete data isolation between workspaces — at middleware, model, and database level." },
+              { title: "Real-time Booking Engine", desc: "Customers pick a service, professional, date, and time. Conflict detection built in." },
+              { title: "Role-based Access Control", desc: "Owner, admin, professional, and customer roles with scoped permissions per workspace." },
+              { title: "Stripe Billing", desc: "Basic / Pro / Business subscription plans with admin plan override for special cases." },
+              { title: "Admin Dashboard", desc: "Analytics, activity logs, and quick actions in a modern dashboard built with React." },
+              { title: "Automated Tests", desc: "PHPUnit + Playwright coverage. Mutation-tested assertions for security-critical paths." },
+            ].map((f) => (
+              <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-6 hover:shadow-md transition-shadow">
+                <h3 class="text-lg font-bold text-gray-900 mb-2">{f.title}</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- TECHNICAL CHALLENGES -->
+      <section class="px-6 sm:px-12 md:px-24 py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+          <div class="mb-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">Technical Challenges</h2>
+            <div class="w-[75px] h-[5px] mt-2 rounded-full" style={`background-color: ${accent}`} />
+          </div>
+          <div class="space-y-8">
+            {[
+              { num: "01", title: "Tenant isolation at every layer", desc: "A simple where('workspace_id', ...) is not enough. Isolation had to be enforced at middleware, FormRequest authorize(), controller writes, route model binding, and queue jobs. A dangling pointer in current_workspace_id could open access to a removed workspace. Solved with defense-in-depth: scopeBindings(), role gates, plan gates, and feature flags — each layer refusing independently." },
+              { num: "02", title: "Refusal shape consistency (403 vs 404)", desc: "Different endpoints returned 403 (which announces the surface exists) while siblings returned 404. A 403 on an admin-only route is an enumeration oracle. Normalized to 404 everywhere for non-qualifying roles or plans, with tests pinning the shape." },
+              { num: "03", title: "Stripe integration with plan override", desc: "Beyond standard Stripe subscriptions, an admin plan_override feature grants free Pro/Business without Stripe. The plan gate reads from one authoritative source (config/features.php) — not hardcoded strings. API credentials are scoped per plan, so a downgraded workspace cannot call the API after plan change." },
+              { num: "04", title: "Booking conflict detection", desc: "Used the laraveljutsu/zap booking engine but wrapped it in a workspace-scoped Booking model. Date parsing across three layers (web, API, public booking) had different behavior — fixed by using ->utc() instead of raw new DateTimeImmutable()." },
+              { num: "05", title: "Queue observability & data leaks", desc: "Notifications were synchronous. Moving to a queue improved latency but created a new problem: if the worker failed, delivery logs weren't written, and historical rows leaked through notification read paths after feature retirement. Solved with centralized visibility (User::visibleNotifications()) called from all read paths and export jobs." },
+              { num: "06", title: "Test infrastructure robustness", desc: "phpunit.xml <env> entries were inert — container .env took precedence, so tests pushed real jobs to dev Redis (271K failed_jobs). Baseline drift happened 4 times from manual bumps. Fixed with dynamic baseline.json, ±5 fuzz tolerance, and an executable check instead of prose." },
+            ].map((c) => (
+              <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-6 sm:p-8 hover:shadow-md transition-shadow">
+                <div class="flex items-start gap-6">
+                  <span class="text-2xl sm:text-3xl font-bold font-mono flex-shrink-0" style={`color: ${accent}`}>{c.num}</span>
+                  <div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">{c.title}</h3>
+                    <p class="text-gray-600 leading-relaxed">{c.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- ADMIN SHOWCASE -->
+      <section class="px-6 sm:px-12 md:px-24 py-16">
+        <div class="max-w-6xl mx-auto">
+          <div class="mb-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">Admin Dashboard</h2>
+            <div class="w-[75px] h-[5px] mt-2 rounded-full" style={`background-color: ${accent}`} />
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="rounded-2xl overflow-hidden shadow-xl">
+              <img src="/eukairon-dashboard.png" alt="Eukairon admin dashboard" class="w-full h-auto" />
+            </div>
+            <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+              <p>
+                A comprehensive admin panel with user roles, activity logs, and real-time analytics. Each workspace sees only its own data — multi-tenancy enforced everywhere.
+              </p>
+              <ul class="space-y-3">
+                {["Multi-tenant SaaS architecture", "Role-based access control", "Real-time analytics", "Activity logging & audit trail"].map((item) => (
+                  <li class="flex items-start gap-3">
+                    <span class="inline-block w-2 h-2 rounded-full mt-2.5 flex-shrink-0" style={`background-color: ${accent}`} />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="px-6 sm:px-12 md:px-24 py-16">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">Need something similar?</h2>
+          <p class="text-xl text-gray-600 mb-10">
+            I build multi-tenant SaaS platforms, REST APIs, and complex integrations from scratch. Let's talk about your project.
+          </p>
+          <a href="/#contact" class="inline-flex items-center gap-2 px-8 py-4 text-white font-medium rounded-lg transition hover:opacity-90" style={`background-color: ${accent}`}>
+            Get in touch
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
