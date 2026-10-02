@@ -3,7 +3,6 @@
 Personal portfolio & professional presence of **Apostolis Syriodis** — Senior Full Stack Developer.
 
 🌐 **Live:** [https://www.apostolis.dev](https://www.apostolis.dev)
-🇬🇷 **Ελληνικά:** [https://www.apostolis.dev/el](https://www.apostolis.dev/el)
 
 ---
 
