@@ -210,6 +210,12 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         <p class="text-sm text-gray-500">
           © {new Date().getFullYear()}
           {siteConfig.name}. {siteConfig.ui.footer.rights}
+          <a
+            href={Astro.url.pathname.startsWith("/el") ? "/el/privacy" : "/privacy"}
+            class="ml-2 hover:text-gray-700 transition-colors underline"
+          >
+            {siteConfig.ui.privacy}
+          </a>
         </p>
       </div>
     </div>

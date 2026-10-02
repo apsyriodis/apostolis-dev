@@ -119,7 +119,7 @@ export const siteConfig = {
       skills: ["AI Agents"],
     },
   ],
-    ui: {
+  ui: {
     nav: {
       about: "About",
       projects: "Projects",
@@ -157,5 +157,43 @@ export const siteConfig = {
       tagline: "Building SaaS platforms from scratch",
       rights: "All rights reserved.",
     },
+    privacy: "Privacy Policy",
+    privacyLastUpdate: "Last updated: October 2, 2026",
+    privacyTitle: "Privacy Policy",
+    privacyIntro: "This Privacy Policy explains how Apostolis Syriodis (\"I\", \"me\") collects, uses, and protects your personal information when you visit apostolis.dev.",
+    privacySections: [
+      {
+        title: "1. What data I collect",
+        body: "When you use the contact form, I collect: your name, your email address, and the content of your message. I do not use cookies, analytics, or any tracking technology on this website.",
+      },
+      {
+        title: "2. How I use your data",
+        body: "I use your data solely to respond to your message. I do not sell, rent, or share your information with third parties for marketing purposes.",
+      },
+      {
+        title: "3. Where your data is stored",
+        body: "Contact form submissions are delivered via Resend (resend.com) to my personal email inbox. Resend processes the data only to deliver the email. The website is hosted on Vercel (vercel.com), which may log standard server data (IP address, browser) for security and operational purposes.",
+      },
+      {
+        title: "4. How long I keep your data",
+        body: "I keep contact form submissions for as long as needed to respond to your inquiry, and up to 12 months thereafter for reference, unless you request deletion earlier.",
+      },
+      {
+        title: "5. Your rights",
+        body: "You have the right to access, correct, or delete your personal data at any time. You also have the right to object to processing or request data portability. To exercise any of these rights, contact me at apsyriodis@gmail.com.",
+      },
+      {
+        title: "6. Third-party services",
+        body: "This site uses the following third-party services: Resend (email delivery), Vercel (hosting), Cloudflare (DNS). Each of these has its own privacy policy.",
+      },
+      {
+        title: "7. Changes to this policy",
+        body: "I may update this Privacy Policy from time to time. The latest version will always be available at apostolis.dev/privacy.",
+      },
+      {
+        title: "8. Contact",
+        body: "For any questions about this Privacy Policy, contact me at apsyriodis@gmail.com.",
+      },
+    ],
   },
 };
