@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Apostolis Syriodis",
-  title: "Senior Full Stack Developer",
+  title: "Senior Full Stack Engineer",
   description:
-    "Senior Full Stack Developer building SaaS platforms with Laravel, React, MySQL & Docker.",
+    "Senior Full Stack Engineer building SaaS platforms with Laravel, React, MySQL & Docker.",
   accentColor: "#2E7D8F",
   social: {
     email: "apsyriodis@gmail.com",
@@ -14,7 +14,7 @@ export const siteConfig = {
     partnely: "https://partnely.com/partners/apostolis-syriodis-developer",
   },
   aboutMe:
-    "I'm a Senior Full Stack Developer based in Athens, Greece, with 5+ years of experience building production-grade web applications. I started as a backend developer and gradually expanded into full stack — today I design and ship entire SaaS platforms, from database architecture and REST APIs to React frontends and Docker deployments. I've worked on high-traffic retail systems, multi-tenant B2B platforms, and I've built Eukairon — a multi-tenant SaaS booking platform — from scratch using Laravel, React, MySQL, Docker, and Stripe. I care about clean code, solid tests, and shipping features that actually solve business problems.",
+    "I'm a Senior Full Stack Engineer based in Athens, Greece, with 5+ years of experience building production-grade web applications. I started as a backend developer and gradually expanded into full stack — today I design and ship entire SaaS platforms, from database architecture and REST APIs to React frontends and Docker deployments. I've worked on high-traffic retail systems, multi-tenant B2B platforms, and I've built Eukairon — a multi-tenant SaaS booking platform — using Laravel, React, MySQL, Docker, and Stripe. I care about clean code, solid tests, and shipping features that actually solve business problems.",
   skills: [
     "Laravel",
     "PHP",
@@ -33,7 +33,7 @@ export const siteConfig = {
     {
       name: "Eukairon",
       description:
-        "A multi-tenant SaaS platform for online bookings, built from scratch. Handles tenant isolation, recurring reservations, Stripe payments, and full test coverage with PHPUnit and Playwright.",
+        "A multi-tenant SaaS platform for online bookings. Handles tenant isolation, recurring reservations, Stripe payments, and full test coverage with PHPUnit and Playwright.",
       link: "/projects/eukairon",
       skills: ["Laravel", "React.js", "MySQL", "Docker", "Stripe"],
     },

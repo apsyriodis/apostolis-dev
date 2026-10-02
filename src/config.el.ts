@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Αποστόλης Συριώδης",
-  title: "Senior Full Stack Developer",
+  title: "Senior Full Stack Engineer",
   description:
-    "Senior Full Stack Developer με 5+ χρόνια εμπειρίας. Χτίζω SaaS πλατφόρμες με Laravel, React, MySQL & Docker.",
+    "Senior Full Stack Engineer με 5+ χρόνια εμπειρίας. Χτίζω SaaS πλατφόρμες με Laravel, React, MySQL & Docker.",
   accentColor: "#2E7D8F",
   social: {
     email: "apsyriodis@gmail.com",
@@ -14,7 +14,7 @@ export const siteConfig = {
     partnely: "https://partnely.com/partners/apostolis-syriodis-developer",
   },
   aboutMe:
-    "Είμαι Senior Full Stack Developer με έδρα την Αθήνα και 5+ χρόνια εμπειρίας στην κατασκευή production-grade web εφαρμογών. Ξεκίνησα ως backend developer και σταδιακά επεκτάθηκα σε full stack — σήμερα σχεδιάζω και παραδίδω ολόκληρες SaaS πλατφόρμες, από αρχιτεκτονική βάσης δεδομένων και REST APIs μέχρι React frontends και Docker deployments. Έχω δουλέψει σε high-traffic retail συστήματα, multi-tenant B2B πλατφόρμες, και έχω χτίσει το Eukairon — μια multi-tenant SaaS πλατφόρμα κρατήσεων — από το μηδέν με Laravel, React, MySQL, Docker και Stripe. Με νοιάζει ο καθαρός κώδικας, τα σωστά tests, και το να παραδίδω features που λύνουν πραγματικά επιχειρηματικά προβλήματα.",
+    "Είμαι Senior Full Stack Engineer με έδρα την Αθήνα και 5+ χρόνια εμπειρίας στην κατασκευή production-grade web εφαρμογών. Ξεκίνησα ως backend developer και σταδιακά επεκτάθηκα σε full stack — σήμερα σχεδιάζω και παραδίδω ολόκληρες SaaS πλατφόρμες, από αρχιτεκτονική βάσης δεδομένων και REST APIs μέχρι React frontends και Docker deployments. Έχω δουλέψει σε high-traffic retail συστήματα, multi-tenant B2B πλατφόρμες, και έχω χτίσει το Eukairon — μια multi-tenant SaaS πλατφόρμα κρατήσεων — από το μηδέν με Laravel, React, MySQL, Docker και Stripe. Με νοιάζει ο καθαρός κώδικας, τα σωστά tests, και το να παραδίδω features που λύνουν πραγματικά επιχειρηματικά προβλήματα.",
   skills: [
     "Laravel",
     "PHP",
@@ -41,7 +41,7 @@ export const siteConfig = {
   experience: [
     {
       company: "Tekmon",
-      title: "Senior Backend Developer",
+      title: "Senior Backend Engineer",
       dateRange: "2025 – Σήμερα",
       bullets: [
         "Ανάπτυξη και συντήρηση multi-tenant B2B SaaS πλατφόρμας που χρησιμοποιείται από enterprise πελάτες.",
