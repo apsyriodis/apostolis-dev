@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Apostolos Syriodis",
   title: "Senior Full Stack Developer",
-    description:
+  description:
     "Senior Full Stack Developer with 5+ years of experience in Laravel, PHP, React.js, and MySQL. I build SaaS platforms, REST APIs, and ERP integrations (SAP) from scratch.",
   accentColor: "#2E7D8F",
   social: {
@@ -37,27 +37,6 @@ export const siteConfig = {
       link: "https://eukairon.gr",
       skills: ["Laravel", "React.js", "MySQL", "Docker", "Stripe"],
     },
-    {
-      name: "Tekmon",
-      description:
-        "Multi-tenant B2B SaaS platform. Worked on core features, tenant management, and integrations with external enterprise systems.",
-      link: "https://www.tekmon.com",
-      skills: ["Laravel", "PHP", "MySQL", "REST APIs"],
-    },
-    {
-      name: "Sklavenitis",
-      description:
-        "High-traffic retail web applications for one of the largest supermarket chains in Greece. Focused on performance, reliability, and integration with internal systems.",
-      link: "https://www.sklavenitis.gr/",
-      skills: ["PHP", "Laravel", "MySQL", "Performance"],
-    },
-    {
-      name: "Green Projects",
-      description:
-        "Microservices-based platform handling data from multiple sources. Designed and implemented backend services and APIs.",
-      link: "https://green-projects.gr/",
-      skills: ["PHP", "Microservices", "REST APIs", "Docker"],
-    },
   ],
   experience: [
     {
@@ -89,6 +68,55 @@ export const siteConfig = {
         "Designed and consumed REST APIs for internal and external integrations.",
         "Containerized services with Docker for consistent deployments.",
       ],
+    },
+  ],
+  education: [
+    {
+      degree: "Master of Science - MS, Computer Science",
+      school: "University of West Attica",
+      dateRange: "2015 – 2022",
+      achievements: [
+        "Thesis: Machine learning model for recommending travel destinations based on attractions and reviews.",
+        "Built with Laravel, Python and ML libraries.",
+      ],
+    },
+  ],
+  certifications: [
+    {
+      name: "Building with the Claude API",
+      issuer: "Anthropic",
+      date: "2025",
+      skills: ["Prompt Engineering", "MCP", "Claude API"],
+    },
+    {
+      name: "Introduction to Model Context Protocol",
+      issuer: "Anthropic",
+      date: "2025",
+      skills: ["MCP"],
+    },
+    {
+      name: "Claude Code in Action",
+      issuer: "Anthropic",
+      date: "2025",
+      skills: ["Claude Code"],
+    },
+    {
+      name: "AI Capabilities and Limitations",
+      issuer: "Anthropic",
+      date: "2025",
+      skills: ["AI Fundamentals"],
+    },
+    {
+      name: "Introduction to Agent Skills",
+      issuer: "Anthropic",
+      date: "2025",
+      skills: ["AI Agents"],
+    },
+    {
+      name: "Introduction to Subagents",
+      issuer: "Anthropic",
+      date: "2025",
+      skills: ["AI Agents"],
     },
   ],
 };
