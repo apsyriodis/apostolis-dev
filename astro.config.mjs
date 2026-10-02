@@ -9,6 +9,9 @@ export default defineConfig({
   site: "https://www.apostolis.dev",
   output: "static",
   adapter: vercel(),
+  security: {
+    checkOrigin: false,
+  },
   i18n: {
     defaultLocale: "en",
     locales: ["en", "el"],
