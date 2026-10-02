@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Apostolis Syriodis",
   title: "Senior Full Stack Developer",
   description:
-    "Senior Full Stack Developer with 5+ years of experience in Laravel, PHP, React.js, and MySQL. I build SaaS platforms, REST APIs, and ERP integrations (SAP) from scratch.",
+    "Senior Full Stack Developer building SaaS platforms with Laravel, React, MySQL & Docker. 5+ years shipping production-grade web apps.",
   accentColor: "#2E7D8F",
   social: {
     email: "apsyriodis@gmail.com",
