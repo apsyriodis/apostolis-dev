@@ -3,7 +3,6 @@
 Personal portfolio & professional presence of **Apostolis Syriodis** — Senior Full Stack Developer.
 
 🌐 **Live:** [https://www.apostolis.dev](https://www.apostolis.dev)
-🇬🇷 **Ελληνικά:** [https://www.apostolis.dev/el](https://www.apostolis.dev/el)
 
 ---
 
@@ -40,45 +39,3 @@ The site is designed as a **central verification point** — a professional link
 - 📊 **Google Search Console** verified
 - 🔒 **Privacy Policy** (EN + EL)
 - 📝 **Case study** for Eukairon (flagship SaaS project)
-
----
-
-## Project Structure
-
-src/
-├── components/ # Reusable UI components
-│ ├── Header.astro
-│ ├── Hero.astro
-│ ├── About.astro
-│ ├── Projects.astro
-│ ├── Experience.astro
-│ ├── Certifications.astro
-│ ├── Education.astro
-│ ├── Contact.astro
-│ ├── Footer.astro
-│ └── LanguageSwitcher.astro
-├── pages/
-│ ├── index.astro # English homepage
-│ ├── privacy.astro # Privacy Policy (EN)
-│ ├── projects/
-│ │ └── eukairon.astro # Eukairon case study (EN)
-│ ├── el/ # Greek pages
-│ │ ├── index.astro
-│ │ ├── privacy.astro
-│ │ └── projects/
-│ │ └── eukairon.astro
-│ └── api/
-│ └── contact.ts # Contact form endpoint
-├── config.ts # English content config
-├── config.el.ts # Greek content config
-├── i18n.ts # Locale helper
-└── styles/
-└── global.css
-
-public/ # Static assets
-├── og-image.png
-├── photo-biography.jpg
-├── eukairon-banner.png
-├── eukairon-landing.png
-├── eukairon-dashboard.png
-└── favicon.svg
