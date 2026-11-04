@@ -66,10 +66,10 @@ const accent = siteConfig.accentColor;
                 Eukairon
               </h1>
               <p class="text-xl sm:text-2xl text-gray-600 leading-relaxed mb-8">
-                Multi-tenant SaaS πλατφόρμα κρατήσεων για μικρές επιχειρήσεις — κομμωτήρια, συνεργεία, κτηνιατρεία. Χτισμένη από το μηδέν με Laravel, React, MySQL & Docker.
+                Multi-tenant SaaS πλατφόρμα κρατήσεων για μικρές επιχειρήσεις — κομμωτήρια, συνεργεία, κτηνιατρεία. Χτισμένη με Laravel, Inertia.js + React, MySQL, Redis & Docker.
               </p>
               <div class="flex flex-wrap gap-2">
-                {["Laravel", "React.js", "MySQL", "Docker", "Stripe", "PHPUnit", "Playwright"].map((tech) => (
+                {["Laravel", "React.js", "Inertia.js", "MySQL", "Redis", "Docker", "Stripe", "Pest", "Playwright"].map((tech) => (
                   <span class="px-3 py-1.5 bg-gray-900 text-white text-sm font-medium rounded-lg">{tech}</span>
                 ))}
               </div>
@@ -96,7 +96,7 @@ const accent = siteConfig.accentColor;
                 Το <strong class="text-gray-900">Eukairon</strong> επιτρέπει σε μικρές επιχειρήσεις να δέχονται κρατήσεις 24/7 — χωρίς τηλέφωνα, χωρίς χαμένα ραντεβού. Κάθε επιχείρηση (workspace) έχει τους δικούς της επαγγελματίες, υπηρεσίες, ωράριο, πελάτες και κρατήσεις, με πλήρη απομόνωση δεδομένων μεταξύ tenants.
               </p>
               <p>
-                Οι πελάτες κάνουν κρατήσεις μέσω public booking page. Οι ιδιοκτήτες διαχειρίζονται τα πάντα από dashboard με analytics, τιμολόγηση (Stripe), και ειδοποιήσεις.
+                Οι πελάτες κλείνουν ραντεβού από τη δημόσια σελίδα κρατήσεων της επιχείρησης — χωρίς λογαριασμό — και λαμβάνουν SMS υπενθύμιση πριν το ραντεβού. Οι ιδιοκτήτες διαχειρίζονται τα πάντα από ένα dashboard: live ημερολόγιο, υπηρεσίες, επαγγελματίες, ωράρια και εξαιρέσεις, καθώς και τη συνδρομή τους μέσω Stripe. Πλήρως δίγλωσσο (ελληνικά / αγγλικά), με τη ζώνη ώρας κάθε επιχείρησης και την αλλαγή ώρας να υπολογίζονται στον server.
               </p>
             </div>
             <div class="rounded-2xl overflow-hidden shadow-xl">
@@ -115,12 +115,12 @@ const accent = siteConfig.accentColor;
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Multi-tenant Αρχιτεκτονική", desc: "Πλήρης απομόνωση δεδομένων μεταξύ workspaces — σε middleware, model, και database level." },
-              { title: "Real-time Booking Engine", desc: "Οι πελάτες επιλέγουν υπηρεσία, επαγγελματία, ημερομηνία και ώρα. Conflict detection ενσωματωμένο." },
-              { title: "Role-based Access Control", desc: "Ρόλοι owner, admin, professional, customer με scoped δικαιώματα ανά workspace." },
-              { title: "Stripe Billing", desc: "Basic / Pro / Business subscription plans με admin plan override για ειδικές περιπτώσεις." },
-              { title: "Admin Dashboard", desc: "Analytics, activity logs, και γρήγορες ενέργειες σε μοντέρνο dashboard χτισμένο με React." },
-              { title: "Automated Tests", desc: "PHPUnit + Playwright coverage. Mutation-tested assertions για security-critical paths." },
+              { title: "Multi-tenant & Role-based Access", desc: "Απομόνωση δεδομένων σε middleware, request authorization, route binding, και ρητό φίλτρο workspace σε κάθε query. Ρόλοι owner, admin, member και viewer ανά workspace." },
+              { title: "Real-time Booking Engine", desc: "Οι πελάτες επιλέγουν υπηρεσία, επαγγελματία, ημερομηνία και ώρα από live διαθεσιμότητα. Conflict detection, άρνηση παρελθοντικών slots, και ενημέρωση ημερολογίου μέσω WebSockets (Reverb)." },
+              { title: "Αυτόματες Υπενθυμίσεις", desc: "SMS υπενθυμίσεις σε Redis queue, 24 ώρες και 2 ώρες πριν από κάθε ραντεβού, η καθεμία με link ακύρωσης ενός κλικ." },
+              { title: "Stripe Billing", desc: "Πλάνα Solo / Pro / Business με σταθερή τιμή, 30 ημέρες δοκιμή στο Solo χωρίς κάρτα, ΦΠΑ στο checkout, και admin plan override για ειδικές περιπτώσεις." },
+              { title: "REST API", desc: "Versioned API με scoped read/write keys, rate limiting ανά key και plan gating — η επιχείρηση στέλνει κρατήσεις από τα δικά της συστήματα." },
+              { title: "Automated Tests", desc: "3.200+ Pest tests (feature + Playwright browser) και 1.100+ Vitest tests, που τρέχουν παράλληλα ως merge gate. Κάθε security fix αποδεικνύεται πρώτα ότι αποτυγχάνει στον χαλασμένο κώδικα." },
             ].map((f) => (
               <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-6 hover:shadow-md transition-shadow">
                 <h3 class="text-lg font-bold text-gray-900 mb-2">{f.title}</h3>
@@ -141,11 +141,11 @@ const accent = siteConfig.accentColor;
           <div class="space-y-8">
             {[
               { num: "01", title: "Tenant isolation σε κάθε layer", desc: "Δεν αρκεί ένα where('workspace_id', ...) — η απομόνωση έπρεπε να ελεγχθεί σε middleware, FormRequest authorize(), controller writes, route model binding, και queue jobs. Ένα dangling pointer στο current_workspace_id (owner removed από workspace) άνοιγε access. Λύθηκε με defense-in-depth: scopeBindings(), role gates, plan gates, και feature flags — κάθε layer αρνείται ανεξάρτητα." },
-              { num: "02", title: "Refusal shape consistency (403 vs 404)", desc: "Διαφορετικά endpoints απαντούσαν 403 (που ανακοινώνει ότι το surface υπάρχει) ενώ τα siblings έδιναν 404. Ένα 403 σε admin-only route = enumeration oracle. Ομαλοποιήθηκε σε 404 παντού για non-qualifying roles/plans, με tests που pin-άρουν το shape." },
-              { num: "03", title: "Stripe integration με plan override", desc: "Πέρα από τα standard Stripe subscriptions, υπάρχει admin plan_override feature για δωρεάν Pro/Business. Ο plan gate διαβάζει από μία authoritative πηγή (config/features.php) — όχι hardcoded strings. Τα API credentials scoped-άρονται στο plan, άρα downgraded workspace δεν μπορεί να καλέσει το API μετά από αλλαγή plan." },
-              { num: "04", title: "Conflict detection σε bookings", desc: "Χρήση του laraveljutsu/zap booking engine αλλά wrap-άρισμα σε δικό μας Booking model με workspace scoping. Date parsing σε τρία layers (web, API, public booking) είχε διαφορετική συμπεριφορά — λύθηκε με ->utc() αντί raw new DateTimeImmutable()." },
+              { num: "02", title: "Refusal shape consistency (403 vs 404)", desc: "Κάποια endpoints απαντούσαν 403 για workspace στο οποίο ο χρήστης δεν ανήκει — επιβεβαιώνοντας ότι το workspace υπάρχει — ενώ τα siblings έδιναν 404. Αυτή η διαφορά είναι enumeration oracle. Ομαλοποιήθηκε σε 404 για κάθε ξένο workspace, με tests που pin-άρουν το shape route προς route." },
+              { num: "03", title: "Stripe integration με plan override", desc: "Πέρα από τα standard Stripe subscriptions, υπάρχει admin plan_override feature για δωρεάν Pro/Business. Ο plan gate διαβάζει από μία authoritative πηγή (config/billing.php) — όχι hardcoded strings. Η πρόσβαση στο API ελέγχεται πάνω στο ίδιο το credential, άρα τα keys ενός downgraded workspace σταματούν να δουλεύουν τη στιγμή που αλλάζει το plan." },
+              { num: "04", title: "Ώρες κρατήσεων σε ζώνες ώρας", desc: "Η εφαρμογή τρέχει σε UTC, ενώ κάθε κράτηση είναι τοπική ώρα στη ζώνη ώρας της επιχείρησης. Το booking engine (laraveljutsu/zap) σύγκρινε date strings, οπότε ένα slot της χθεσινής μέρας της επιχείρησης περνούσε για περίπου τρεις ώρες τη μέρα, και ένα timestamp με offset που αποθηκευόταν χωρίς ->utc() κατέληγε ώρες λάθος. Λύθηκε με σύγκριση instants, άρνηση παρελθοντικής ώρας σε κάθε write path (admin, API, public), υποχρεωτικό offset στο API, και φιλτράρισμα της λίστας slots σε ένα σημείο, ώστε καμία οθόνη να μην προσφέρει slot που μια άλλη αρνείται." },
               { num: "05", title: "Queue observability & data leaks", desc: "Τα notifications ήταν sync — κάθε email έμπαινε inline στο request. Μετακίνηση σε queue βελτίωσε latency αλλά δημιούργησε νέο πρόβλημα: αν ο worker πέσει, τα delivery logs δεν γράφονται, και historical rows με comment content διέρρεαν μέσω notification read paths μετά από feature retirement. Λύθηκε με centralized visibility (User::visibleNotifications()) που καλείται από όλα τα read paths + export job." },
-              { num: "06", title: "Test infrastructure robustness", desc: "phpunit.xml <env> entries ήταν inert — container .env υπερίσχυε, άρα tests push-άραν real jobs στο dev Redis (271K failed_jobs). Baseline drift 4 φορές (manual bump → λάθος) → λύθηκε με dynamic baseline.json + ±5 fuzz + executable check αντί prose." },
+              { num: "06", title: "Test infrastructure robustness", desc: "phpunit.xml <env> entries ήταν inert — container .env υπερίσχυε, άρα tests push-άραν real jobs στο dev Redis (271K failed_jobs). Baseline drift 4 φορές από manual bumps. Λύθηκε με executable baseline (baseline.json, ανοχή ±5) που ελέγχεται σε κάθε merge, locks ανά βάση ώστε παράλληλα sessions να μη μοιράζονται ποτέ test DB, και parallel gate 4 processes που τρέχει όλη τη σουίτα σε περίπου ένα λεπτό." },
             ].map((c) => (
               <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-6 sm:p-8 hover:shadow-md transition-shadow">
                 <div class="flex items-start gap-6">
@@ -165,19 +165,19 @@ const accent = siteConfig.accentColor;
       <section class="px-6 sm:px-12 md:px-24 py-16">
         <div class="max-w-6xl mx-auto">
           <div class="mb-12">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">Admin Dashboard</h2>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">Dashboard Ιδιοκτήτη</h2>
             <div class="w-[75px] h-[5px] mt-2 rounded-full" style={`background-color: ${accent}`} />
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div class="rounded-2xl overflow-hidden shadow-xl">
-              <img src="/eukairon-dashboard-el.png" alt="Eukairon — dashboard διαχείρισης" class="w-full h-auto" />
+              <img src="/eukairon-dashboard-el.png" alt="Eukairon — dashboard ιδιοκτήτη" class="w-full h-auto" />
             </div>
             <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>
-                Ένα ολοκληρωμένο admin panel με user roles, activity logs, και real-time analytics. Κάθε workspace βλέπει μόνο τα δικά του δεδομένα — multi-tenancy enforced παντού.
+                Ό,τι χρειάζεται ο ιδιοκτήτης με μια ματιά: έσοδα, κρατήσεις μήνα, πληρότητα και ποσοστό μη εμφανίσεων σε σχέση με τον προηγούμενο μήνα, το σημερινό και το επόμενο πρόγραμμα, κορυφαίοι πελάτες, και έσοδα ανά ημέρα. Κάθε workspace βλέπει μόνο τα δικά του δεδομένα.
               </p>
               <ul class="space-y-3">
-                {["Multi-tenant SaaS αρχιτεκτονική", "Role-based access control", "Real-time analytics", "Activity logging & audit trail"].map((item) => (
+                {["KPIs σε σύγκριση με τον προηγούμενο μήνα", "Σημερινό & επόμενο πρόγραμμα", "Κορυφαίοι πελάτες & έσοδα ανά ημέρα", "Νέα κράτηση με ένα κλικ"].map((item) => (
                   <li class="flex items-start gap-3">
                     <span class="inline-block w-2 h-2 rounded-full mt-2.5 flex-shrink-0" style={`background-color: ${accent}`} />
                     <span>{item}</span>

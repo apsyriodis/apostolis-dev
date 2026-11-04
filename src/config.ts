@@ -33,7 +33,7 @@ export const siteConfig = {
     {
       name: "Eukairon",
       description:
-        "A multi-tenant SaaS platform for online bookings. Handles tenant isolation, recurring reservations, Stripe payments, and full test coverage with PHPUnit and Playwright.",
+        "A multi-tenant SaaS platform for online appointment booking. Handles tenant isolation, live availability, SMS reminders, Stripe subscription billing, and a REST API, backed by 4,000+ automated tests (Pest, Playwright, Vitest).",
       link: "/projects/eukairon",
       skills: ["Laravel", "React.js", "MySQL", "Docker", "Stripe"],
     },
