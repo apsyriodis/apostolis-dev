@@ -169,15 +169,20 @@ const accent = siteConfig.accentColor;
             <div class="w-[75px] h-[5px] mt-2 rounded-full" style={`background-color: ${accent}`} />
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="rounded-2xl overflow-hidden shadow-xl">
-              <img src="/eukairon-dashboard.png" alt="Eukairon owner dashboard" class="w-full h-auto" />
+            <div class="space-y-8">
+              <div class="rounded-2xl overflow-hidden shadow-xl">
+                <img src="/eukairon-dashboard.png" alt="Eukairon owner dashboard" class="w-full h-auto" />
+              </div>
+              <div class="rounded-2xl overflow-hidden shadow-xl">
+                <img src="/eukairon-statistics.png" alt="Eukairon statistics page" class="w-full h-auto" />
+              </div>
             </div>
             <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>
-                Everything a business owner needs at a glance: revenue, monthly bookings, occupancy, and no-show rate against the previous month, the day's and upcoming schedule, top customers, and revenue per day. A separate statistics page breaks it down by month, quarter or year: revenue, online booking share, cancellations and no-shows, new vs returning customers, occupancy per professional, services, booking sources and peak hours. Each workspace sees only its own data.
+                Everything a business owner needs at a glance: revenue, monthly bookings, occupancy, and no-show rate against the previous month, the day's and upcoming schedule, top customers, and revenue per day. A separate statistics page covers this month, the last 3 or the last 12 months: revenue, online booking share, cancellations and no-shows, new vs returning customers, occupancy per professional, services, booking sources and peak hours. Each workspace sees only its own data.
               </p>
               <ul class="space-y-3">
-                {["Month-over-month KPIs", "Today's & upcoming schedule", "Top customers & revenue per day", "Statistics by month, quarter or year"].map((item) => (
+                {["Month-over-month KPIs", "Today's & upcoming schedule", "Top customers & revenue per day", "Statistics for 1, 3 or 12 months"].map((item) => (
                   <li class="flex items-start gap-3">
                     <span class="inline-block w-2 h-2 rounded-full mt-2.5 flex-shrink-0" style={`background-color: ${accent}`} />
                     <span>{item}</span>
