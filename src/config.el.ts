@@ -76,7 +76,6 @@ export const siteConfig = {
     {
       degree: "Master of Science - MS, Computer Science",
       school: "Πανεπιστήμιο Δυτικής Αττικής",
-      dateRange: "2015 – 2022",
       achievements: [
         "Διπλωματική: Μοντέλο μηχανικής μάθησης για σύσταση ταξιδιωτικών προορισμών βάσει αξιοθέατων και κριτικών.",
         "Υλοποίηση με Laravel, Python και ML libraries.",

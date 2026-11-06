@@ -76,7 +76,6 @@ export const siteConfig = {
     {
       degree: "Master of Science - MS, Computer Science",
       school: "University of West Attica",
-      dateRange: "2015 – 2022",
       achievements: [
         "Thesis: Machine learning model for recommending travel destinations based on attractions and reviews.",
         "Built with Laravel, Python and ML libraries.",

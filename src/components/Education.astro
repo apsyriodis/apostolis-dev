@@ -33,9 +33,11 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
                     {edu.school}
                   </p>
                 </div>
-                <span class="font-mono text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0">
-                  {edu.dateRange}
-                </span>
+                {"dateRange" in edu && edu.dateRange && (
+                  <span class="font-mono text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0">
+                    {edu.dateRange}
+                  </span>
+                )}
               </div>
 
               <ul class="space-y-2">
