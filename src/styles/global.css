@@ -1,7 +1,20 @@
 @import "tailwindcss";
 
+/* Inter carries the text (and has Greek glyphs); JetBrains Mono is kept for
+   small "developer" accents through Tailwind's font-mono utility. */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
 body {
-  /* IBM Plex Mono has no Greek glyphs; JetBrains Mono supplies them so the
-     Greek pages stay monospace instead of falling back to a system serif. */
-  font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.025em;
 }

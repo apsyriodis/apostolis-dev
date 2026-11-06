@@ -41,7 +41,7 @@ The project follows a component-based architecture with all customization centra
 - The site uses Tailwind CSS v4 with the Vite plugin configuration
 - No linting or testing framework is currently configured
 - All components are in `.astro` format (not React/Vue/etc)
-- The project uses IBM Plex Mono font loaded from Google Fonts
+- Typography: Inter for text and headings, JetBrains Mono (Tailwind `font-mono`) only for small accents — tags, dates, role line, numbering. Both are loaded from Google Fonts and both have Greek glyphs; IBM Plex Mono was dropped because it has none and the Greek pages fell back to a system serif
 - Social links in the config are all optional and will conditionally render
 
 ## Working with Components
@@ -49,7 +49,7 @@ The project follows a component-based architecture with all customization centra
 When modifying components:
 1. Components read directly from the imported `siteConfig` object
 2. Use Tailwind utility classes for styling
-3. Maintain the existing monospace font aesthetic
+3. Keep body text in the sans font; use `font-mono` only for short accents
 4. Use Tabler Icons for consistency with existing icons
 
 ## Configuration Structure
