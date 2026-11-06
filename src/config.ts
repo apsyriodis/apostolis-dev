@@ -35,7 +35,9 @@ export const siteConfig = {
       description:
         "A multi-tenant SaaS platform for online appointment booking. Handles tenant isolation, live availability, SMS reminders, Stripe subscription billing, and a REST API, backed by 4,000+ automated tests (Pest, Playwright, Vitest).",
       link: "/projects/eukairon",
-      skills: ["Laravel", "React.js", "MySQL", "Docker", "Stripe"],
+      image: "/eukairon-dashboard.png",
+      imageAlt: "Eukairon owner dashboard",
+      skills: ["Laravel", "React.js", "Inertia.js", "MySQL", "Redis", "Docker", "Stripe"],
     },
   ],
   experience: [
@@ -125,11 +127,15 @@ export const siteConfig = {
       projects: "Projects",
       experience: "Experience",
       education: "Education",
+      contact: "Contact",
     },
     hero: {
       hello: "Hello!",
       im: "I'm",
+      ctaPrimary: "Let's work together",
+      ctaSecondary: "See my work",
     },
+    projectCta: "Read the case study",
     sections: {
       aboutMe: "About Me",
       projects: "Projects",

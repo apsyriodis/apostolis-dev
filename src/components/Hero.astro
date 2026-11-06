@@ -153,6 +153,21 @@ const ui = siteConfig.ui;
         >
           {siteConfig.title}
         </p>
+        <div class="mt-8 sm:mt-10 flex flex-wrap gap-3 animate-fade-in animation-delay-600">
+          <a
+            href="#contact"
+            class="inline-flex items-center gap-2 px-6 py-3 text-white font-medium rounded-lg transition hover:opacity-90"
+            style={`background-color: ${siteConfig.accentColor}`}
+          >
+            {ui.hero.ctaPrimary} <span aria-hidden="true">→</span>
+          </a>
+          <a
+            href="#projects"
+            class="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm border border-gray-300 text-gray-800 font-medium rounded-lg transition hover:border-gray-500"
+          >
+            {ui.hero.ctaSecondary}
+          </a>
+        </div>
       </div>
 
       <!-- Photo column -->
@@ -348,5 +363,12 @@ const ui = siteConfig.ui;
 
   .animation-delay-600 {
     animation-delay: 0.6s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in {
+      animation: none;
+      opacity: 1;
+    }
   }
 </style>

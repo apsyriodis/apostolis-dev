@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
 body {
-  font-family: 'IBM Plex Mono', monospace;
+  /* IBM Plex Mono has no Greek glyphs; JetBrains Mono supplies them so the
+     Greek pages stay monospace instead of falling back to a system serif. */
+  font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;
 }

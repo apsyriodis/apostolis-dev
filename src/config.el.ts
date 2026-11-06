@@ -35,7 +35,9 @@ export const siteConfig = {
       description:
         "Μια multi-tenant SaaS πλατφόρμα online ραντεβού. Διαχειρίζεται tenant isolation, live διαθεσιμότητα, SMS υπενθυμίσεις, συνδρομές μέσω Stripe, και REST API, με 4.000+ automated tests (Pest, Playwright, Vitest).",
       link: "/el/projects/eukairon",
-      skills: ["Laravel", "React.js", "MySQL", "Docker", "Stripe"],
+      image: "/eukairon-dashboard-el.png",
+      imageAlt: "Eukairon — dashboard ιδιοκτήτη",
+      skills: ["Laravel", "React.js", "Inertia.js", "MySQL", "Redis", "Docker", "Stripe"],
     },
   ],
   experience: [
@@ -125,11 +127,15 @@ export const siteConfig = {
       projects: "Έργα",
       experience: "Εμπειρία",
       education: "Εκπαίδευση",
+      contact: "Επικοινωνία",
     },
     hero: {
       hello: "Γεια σας!",
       im: "Είμαι ο",
+      ctaPrimary: "Ας συνεργαστούμε",
+      ctaSecondary: "Δείτε τη δουλειά μου",
     },
+    projectCta: "Δείτε το case study",
     sections: {
       aboutMe: "Σχετικά με εμένα",
       projects: "Έργα",

@@ -1,7 +1,6 @@
 ---
 import { getSiteConfig } from "../i18n";
 const siteConfig = getSiteConfig(Astro.url.pathname);
-import { getSiteConfig } from "../i18n";
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 ---
 
@@ -23,11 +22,9 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
           {siteConfig.projects.map((project, index) => {
             const Component = project.link ? "a" : "div";
             const linkProps = project.link
-              ? {
-                  href: project.link,
-                  target: "_blank",
-                  rel: "noopener noreferrer",
-                }
+              ? project.link.startsWith("http")
+                ? { href: project.link, target: "_blank", rel: "noopener noreferrer" }
+                : { href: project.link }
               : {};
 
             return (
@@ -40,7 +37,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                       : ""
                   }`}
                 >
-                  {project.link && (
+                  {project.link && !project.image && (
                     <div class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 group-hover:bg-gray-700">
                       <svg
                         class="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -58,7 +55,8 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                     </div>
                   )}
 
-                  <div class="space-y-4">
+                  <div class={project.image ? "grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-10 items-center" : ""}>
+                  <div class={`space-y-4 ${project.image ? "md:col-span-3" : ""}`}>
                     <div>
                       <span
                         class="text-sm font-mono"
@@ -72,7 +70,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                     </div>
 
                     <p
-                      class={`text-base sm:text-lg text-gray-600 leading-relaxed ${project.link ? "pr-12 sm:pr-14 md:pr-16" : ""}`}
+                      class={`text-base sm:text-lg text-gray-600 leading-relaxed ${project.link && !project.image ? "pr-12 sm:pr-14 md:pr-16" : ""}`}
                     >
                       {project.description}
                     </p>
@@ -90,6 +88,28 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                         ))}
                       </div>
                     )}
+
+                    {project.link && project.image && (
+                      <span
+                        class="inline-flex items-center gap-2 pt-2 text-sm sm:text-base font-semibold"
+                        style={{ color: siteConfig.accentColor }}
+                      >
+                        {siteConfig.ui.projectCta}
+                        <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                      </span>
+                    )}
+                  </div>
+
+                  {project.image && (
+                    <div class="md:col-span-2 rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                      <img
+                        src={project.image}
+                        alt={project.imageAlt ?? project.name}
+                        loading="lazy"
+                        class="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
+                      />
+                    </div>
+                  )}
                   </div>
                 </Component>
               </div>
