@@ -96,7 +96,7 @@ const accent = siteConfig.accentColor;
                 <strong class="text-gray-900">Eukairon</strong> lets small businesses accept bookings 24/7 — no phone calls, no missed appointments. Each business (workspace) gets its own professionals, services, schedules, customers, and bookings, with complete data isolation between tenants.
               </p>
               <p>
-                Customers book through the business's own public booking page — no account needed — and get SMS reminders before their appointment. Owners run everything from one dashboard: live calendar, services, professionals, opening hours and exceptions, plus their subscription through Stripe. Fully bilingual (Greek / English), with each business's timezone and daylight-saving changes handled server-side.
+                Customers book through the business's own public booking page — no account needed — and get SMS reminders before their appointment. Owners run everything from one dashboard: statistics, live calendar, services, professionals, opening hours and exceptions, plus their subscription through Stripe. Fully bilingual (Greek / English), with each business's timezone and daylight-saving changes handled server-side.
               </p>
             </div>
             <div class="rounded-2xl overflow-hidden shadow-xl self-center">
@@ -174,10 +174,10 @@ const accent = siteConfig.accentColor;
             </div>
             <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>
-                Everything a business owner needs at a glance: revenue, monthly bookings, occupancy, and no-show rate against the previous month, the day's and upcoming schedule, top customers, and revenue per day. Each workspace sees only its own data.
+                Everything a business owner needs at a glance: revenue, monthly bookings, occupancy, and no-show rate against the previous month, the day's and upcoming schedule, top customers, and revenue per day. A separate statistics page breaks it down by month, quarter or year: revenue, online booking share, cancellations and no-shows, new vs returning customers, occupancy per professional, services, booking sources and peak hours. Each workspace sees only its own data.
               </p>
               <ul class="space-y-3">
-                {["Month-over-month KPIs", "Today's & upcoming schedule", "Top customers & revenue per day", "One-click new booking"].map((item) => (
+                {["Month-over-month KPIs", "Today's & upcoming schedule", "Top customers & revenue per day", "Statistics by month, quarter or year"].map((item) => (
                   <li class="flex items-start gap-3">
                     <span class="inline-block w-2 h-2 rounded-full mt-2.5 flex-shrink-0" style={`background-color: ${accent}`} />
                     <span>{item}</span>
