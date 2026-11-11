@@ -84,6 +84,12 @@ export const siteConfig = {
   ],
   certifications: [
     {
+      name: "Pharos AI Factory Agentic AI Bootcamp",
+      issuer: "OpenACC",
+      date: "2026",
+      skills: ["Agentic AI", "AI Agents"],
+    },
+    {
       name: "Building with the Claude API",
       issuer: "Anthropic",
       date: "2026",
